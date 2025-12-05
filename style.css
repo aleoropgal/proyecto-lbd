@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(160deg, #77a6dc, #eef5ff);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+p {
+            font-size: 18px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #1b4e8a;
+    font-weight: 700;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #1b4e8a;
+    border-radius: 3px;
+    margin: 8px auto 0;
+}
+
+#formulario, 
+.formulario {
+    background: rgba(255, 255, 255, 0.90);
+    backdrop-filter: blur(6px);
+    border-radius: 25px;
+    padding: 50px 30px;
+    text-align: center;
+
+    width: 80%;
+    max-width: 60%;
+    min-height: auto;
+
+    margin: 60px auto;
+    box-shadow: 0 12px 25px rgba(0, 70, 140, 0.22);
+    animation: fadeIn .6s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+    width: 50%;
+    padding: 12px;
+    border-radius: 20px;
+    border: 2px solid #c7daf5;
+    font-size: 15px;
+    outline: none;
+    transition: 0.25s border, 0.25s box-shadow;
+    background: #ffffff;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #2b72d6;
+    box-shadow: 0 0 8px rgba(40, 110, 200, 0.35);
+}
+
+input[type="submit"], .btn-style {
+    background: #2b72d6;
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background .25s, transform .15s;
+    box-shadow: 0 4px 10px rgba(0, 75, 150, 0.3);
+}
+
+input[type="submit"]:hover, 
+.btn-style:hover {
+    background: #1b5bb8;
+    transform: translateY(-2px);
+}
+
+a {
+    color: #1b4e8a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.tabla-medica {
+    width: 80%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    font-size: 15px;
+    background: #ffffffea;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 8px 20px rgba(0, 70, 140, 0.18);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.tabla-medica thead th {
+    background: #2b72d6;
+    color: white;
+    padding: 12px;
+    border-bottom: 4px solid #1b4e8a;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.tabla-medica td {
+    border-bottom: 1px solid #c7daf5;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabla-medica tbody tr:hover {
+    background-color: #e8f1ff;
+    transition: .2s;
+}
+
+.tabla-medica td[colspan] {
+    font-weight: bold;
+    color: #1b4e8a;
+    padding: 20px;
+}
+
+@media print {
+    body { background: white; }
+    .tabla-medica { width: 100%; box-shadow: none; }
+    #formulario, .formulario { box-shadow: none; }
+}

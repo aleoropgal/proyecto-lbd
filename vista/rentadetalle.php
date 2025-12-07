@@ -37,7 +37,7 @@
                     <td><?= $renta['id_rentadetalles'] ?></td>
                     <td><?= $renta['id_articulo'] ?></td>
                     <td><?= $renta['fecha_limite']?></td>
-                    <td><?= $renta['id_empretorno'] ?></td>
+                    <td><?= $renta['idempleado_retorno'] ?></td>
                     <td><?= $renta['fecha_entregado'] ?></td>
                     <td>
                     <a href="retorno.php?id_detalle=<?= $renta['id_rentadetalles'] ?>">

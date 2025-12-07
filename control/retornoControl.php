@@ -7,7 +7,7 @@ $fecha_entregado = $_POST['fecha_entregado'];
 
 $conexion = conecta();
 
-$stmt = $conexion->prepare("update renta_detalles set id_empretorno = :empleado, fecha_entregado = :fecha where id_rentadetalles = :id_detalle
+$stmt = $conexion->prepare("update renta_detalles set idempleado_retorno = :empleado, fecha_entregado = :fecha where id_rentadetalles = :id_detalle
 ");
 
 $stmt->execute([

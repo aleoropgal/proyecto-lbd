@@ -34,9 +34,6 @@
         <label>ID Cliente:</label>
         <input type="number" name="id_cliente"><br><br>
 
-        <label>ID Artículo:</label>
-        <input type="number" name="id_articulo"><br><br>
-
         <input type="submit" value="Buscar renta">
     </form>
 

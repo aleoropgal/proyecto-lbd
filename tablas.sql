@@ -29,19 +29,16 @@ nombre varchar(64) not null,
 
 
 create table articulo (id_articulo int auto_increment primary key,
-nombre varchar(64) not null, id_marca int not null,
+nombre varchar(64) not null,
 modelo varchar(64) not null,
-costo_diario int not null,
-fecha_registro timestamp default current_timestamp, constraint fk_idmarca
-foreign key (id_marca) REFERENCES marca(id_marca)
-on delete cascade on update cascade
+descripcion varchar(64)
 );
 
 
 create table articulo_unidad (id_individual int auto_increment primary key,
 id_articulo int not null, id_marca int not null,
-costo_diario int not null, fecha_registro timestamp default
-current_timestamp, constraint fk_idmarca
+cpd int, fecha_registro timestamp default
+current_timestamp, constraint fk_idmarc
 foreign key (id_marca) REFERENCES marca(id_marca)
 on delete cascade on update cascade, constraint fk_id_articulo
 foreign key (id_articulo) REFERENCES articulo(id_articulo)
@@ -62,15 +59,15 @@ on delete cascade on update cascade
 
 create table renta_detalles (id_rentadetalles int
 auto_increment primary key, id_renta int not null,
-id_artind int not null, fecha_limite date not null,
-id_empretorno int, fecha_entregado date,
+id_articulo int not null, fecha_limite date not null,
+idempleado_retorno int, fecha_entregado date,
 constraint fk_renta foreign key (id_renta)
 REFERENCES renta(id_renta)
 on delete cascade on update cascade,
-constraint fk_artind foreign key (id_artind)
+constraint fk_artind foreign key (id_articulo)
 REFERENCES articulo_unidad(id_individual)
 on delete cascade on update cascade,
-constraint fk_empret foreign key (id_empretorno)
+constraint fk_empret foreign key (idempleado_retorno)
 REFERENCES empleado(id_empleado)
 on delete cascade on update cascade
 );

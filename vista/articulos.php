@@ -21,7 +21,7 @@
     <h1 class="section-title">Artículo</h1>
 
     <div style="text-align: center;">
-        <a href = "nuevoArticulo.php" class="btn">
+        <a href = "nuevoarticulo.php" class="btn">
              <button class="btn-style"> Agregar nuevo artículo </button>
         </a>
     </div>
